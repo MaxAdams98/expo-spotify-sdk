@@ -1,5 +1,5 @@
-import { SpotifyConfig, SpotifySession } from "./ExpoSpotifySDK.types";
-import ExpoSpotifySDKModule from "./ExpoSpotifySDKModule";
+import { SpotifyConfig, SpotifySession } from './ExpoSpotifySDK.types';
+import ExpoSpotifySDKModule from './ExpoSpotifySDKModule';
 
 function isAvailable(): boolean {
   return ExpoSpotifySDKModule.isAvailable();
@@ -7,7 +7,7 @@ function isAvailable(): boolean {
 
 function authenticateAsync(config: SpotifyConfig): Promise<SpotifySession> {
   if (!config.scopes || config.scopes?.length === 0) {
-    throw new Error("scopes are required");
+    throw new Error('scopes are required');
   }
 
   return ExpoSpotifySDKModule.authenticateAsync(config);

@@ -11,7 +11,7 @@ More to come...
 ## Installation
 
 ```sh
-npx expo install @wwdrew/expo-spotify-sdk
+npx expo install @MaxAdams98/expo-spotify-sdk
 ```
 
 ## Configuration
@@ -21,7 +21,7 @@ Include the `expo-spotify-sdk` plugin in your `app.json/app.config.js` file with
 ```javascript
   ...
   "plugins": [
-    ["@wwdrew/expo-spotify-sdk", {
+    ["@MaxAdams98/expo-spotify-sdk", {
       "clientID": "<your-spotify-client-id>",
       "scheme": "expo-spotify-sdk-example",
       "host": "authenticate"
@@ -62,12 +62,12 @@ Starts the authentication process. Requires an array of OAuth scopes. If the Spo
 
 **Note:** The following scopes are not available to Expo Spotify SDK:
 
-  - user-read-playback-position
-  - user-soa-link
-  - user-soa-unlink
-  - user-manage-entitlements
-  - user-manage-partner
-  - user-create-partner
+- user-read-playback-position
+- user-soa-link
+- user-soa-unlink
+- user-manage-entitlements
+- user-manage-partner
+- user-create-partner
 
 ### Types
 
@@ -86,24 +86,24 @@ interface SpotifySession {
 }
 
 type SpotifyScopes =
-  | "ugc-image-upload"
-  | "user-read-playback-state"
-  | "user-modify-playback-state"
-  | "user-read-currently-playing"
-  | "app-remote-control"
-  | "streaming"
-  | "playlist-read-private"
-  | "playlist-read-collaborative"
-  | "playlist-modify-private"
-  | "playlist-modify-public"
-  | "user-follow-modify"
-  | "user-follow-read"
-  | "user-top-read"
-  | "user-read-recently-played"
-  | "user-library-modify"
-  | "user-library-read"
-  | "user-read-email"
-  | "user-read-private";
+  | 'ugc-image-upload'
+  | 'user-read-playback-state'
+  | 'user-modify-playback-state'
+  | 'user-read-currently-playing'
+  | 'app-remote-control'
+  | 'streaming'
+  | 'playlist-read-private'
+  | 'playlist-read-collaborative'
+  | 'playlist-modify-private'
+  | 'playlist-modify-public'
+  | 'user-follow-modify'
+  | 'user-follow-read'
+  | 'user-top-read'
+  | 'user-read-recently-played'
+  | 'user-library-modify'
+  | 'user-library-read'
+  | 'user-read-email'
+  | 'user-read-private';
 ```
 
 ## Token Swap Example
@@ -113,8 +113,8 @@ An example token swap endpoint has been provided in the `example` project. For i
 1. Open the `server.js` file and add your client details:
 
 ```javascript
-const CLIENT_ID = "<your-client-id>";
-const CLIENT_SECRET = "<your-client-secret>";
+const CLIENT_ID = '<your-client-id>';
+const CLIENT_SECRET = '<your-client-secret>';
 ```
 
 These values can be found in your [Spotify Developer Dashboard](https://developer.spotify.com/dashboard). You will need an existing Spotify app for this.
@@ -142,8 +142,8 @@ All authentication requests will now be sent through the token swap server.
 
 This project has been heavily inspired by the following projects:
 
-* [react-native-spotify-remote](https://github.com/cjam/react-native-spotify-remote)
-* [expo-spotify](https://github.com/kvbalib/expo-spotify)
+- [react-native-spotify-remote](https://github.com/cjam/react-native-spotify-remote)
+- [expo-spotify](https://github.com/kvbalib/expo-spotify)
 
 ## Contribute
 
