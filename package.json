@@ -29,7 +29,10 @@
     "ios",
     "app.plugin.js",
     "expo-module.config.json",
-    "server.js"
+    "server.js",
+    "ExpoSpotifySDK.podspec",
+    "README.md",
+    "LICENSE"
   ],
   "jest": {
     "preset": "expo-module-scripts"
