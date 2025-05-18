@@ -1,6 +1,6 @@
 require 'json'
 
-package = JSON.parse(File.read(File.join(__dir__, '..', 'package.json')))
+package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
   s.name           = 'ExpoSpotifySDK'
@@ -14,6 +14,10 @@ Pod::Spec.new do |s|
   s.swift_version  = '5.4'
   s.source         = { git: 'https://github.com/MaxAdams98/expo-spotify-sdk' }
   s.static_framework = true
+  s.module_name = 'ExpoSpotifySDK'
+  s.public_header_files = '*.h'
+  s.source_files = '*.{h,m,swift}'
+  s.requires_arc = true
 
   s.dependency 'ExpoModulesCore'
   s.dependency 'PromiseKit', "~> 6.8"
@@ -24,7 +28,6 @@ Pod::Spec.new do |s|
     'SWIFT_COMPILATION_MODE' => 'wholemodule'
   }
 
-  s.source_files = "**/*.{h,m,swift}"
   s.exclude_files = "SpotifySDK/SpotifyiOS.xcframework/**/*.h"
   s.vendored_frameworks = "SpotifySDK/SpotifyiOS.xcframework"
 end

@@ -11,9 +11,31 @@ export interface SpotifyConfig {
   tokenRefreshURL?: string;
 }
 
-// export interface AndroidSpotifyConfig extends SpotifyConfig {
-//   responseType: "token" | "code";
-// }
+// PlayerState interface for playback information
+export interface PlayerState {
+  playing: boolean;
+  track: {
+    uri: string;
+    name: string;
+    duration: number;
+    artists: { name: string; uri: string }[];
+    album?: {
+      name: string;
+      uri: string;
+      images?: { url: string; width: number; height: number }[];
+    };
+  } | null;
+  playbackPosition: number;
+  playbackSpeed: number;
+  repeatMode: 'off' | 'track' | 'context';
+  shuffleModeEnabled: boolean;
+}
+
+// Playback options interface
+export interface PlaybackOptions {
+  position?: number; // Position in ms to start playback
+  playlistIndex?: number; // Start index for playlist playback
+}
 
 export type SpotifyScope =
   | 'ugc-image-upload'
