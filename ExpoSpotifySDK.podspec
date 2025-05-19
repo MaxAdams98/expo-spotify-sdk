@@ -28,6 +28,6 @@ Pod::Spec.new do |s|
     'SWIFT_COMPILATION_MODE' => 'wholemodule'
   }
 
-  s.exclude_files = "SpotifySDK/SpotifyiOS.xcframework/**/*.h"
-  s.vendored_frameworks = "SpotifySDK/SpotifyiOS.xcframework"
+  s.exclude_files = "ios/SpotifySDK/SpotifyiOS.xcframework/**/*.h"
+  s.vendored_frameworks = "ios/SpotifySDK/SpotifyiOS.xcframework"
 end
